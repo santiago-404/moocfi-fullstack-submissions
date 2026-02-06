@@ -1,6 +1,6 @@
 import axios from "axios"
 
-let baseUrl = "http://localhost:3000/api/phonebook";
+let baseUrl = "/api/phonebook";
 
 export const getAll = async () => {
   try {
