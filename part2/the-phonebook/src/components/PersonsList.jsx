@@ -9,9 +9,7 @@ const Persons = ({list, handleDelete}) => {
   )
 }
 
-const Person = ({props: {name, number}, id, handleDelete}) => {
-  console.log(id);
-  
+const Person = ({props: {name, number}, id, handleDelete}) => {  
   return (
     <Fragment>
       <li>

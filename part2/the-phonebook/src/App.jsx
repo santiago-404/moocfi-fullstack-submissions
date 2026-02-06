@@ -17,9 +17,15 @@ const App = () => {
     message: ''
   });
 
+  console.log(persons);
+  
+
   useEffect(() => {
     const fetchData = async () => {
       const response = await getAll();
+      console.log(persons);
+      
+  
       setPersons(response);
     }
     fetchData();

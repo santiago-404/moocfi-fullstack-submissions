@@ -1,10 +1,11 @@
 import axios from "axios"
 
-let baseUrl = "http://localhost:3001/persons";
+let baseUrl = "http://localhost:3000/api/phonebook";
 
 export const getAll = async () => {
   try {
     const response = await axios.get(baseUrl);
+    
     return response.data;
   } catch (error) {
     console.log(error);
