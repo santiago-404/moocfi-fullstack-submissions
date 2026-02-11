@@ -7,17 +7,23 @@
     "dev": "nodemon src/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:ui": "if exist dist rmdir /s /q dist && cd ../frontend && npm run build && xcopy ..\\frontend\\dist ..\\backend\\dist /E /I /H /Y",
-    "deploy:full": "npm run build:ui && git add . && git commit -m \"uibuild\" && git push"
+    "deploy:full": "npm run build:ui && git add . && git commit -m \"uibuild\" && git push",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@stylistic/eslint-plugin": "^5.8.0",
+    "eslint": "^10.0.0",
+    "globals": "^17.3.0",
     "morgan": "^1.10.1",
     "nodemon": "^3.1.11"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mongoose": "^9.1.6"
   }
 }
